@@ -122,7 +122,7 @@ export default function App() {
     if (!token) return;
     setLoading(true);
     try {
-      const res = await fetch('http://localhost:3000/api/employees', {
+      const res = await fetch('https://ese-project-1.onrender.com/api/employees', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -153,7 +153,7 @@ export default function App() {
   const checkServerStatus = async () => {
     setCheckingServer(true);
     try {
-      const res = await fetch('http://localhost:3000/');
+      const res = await fetch('https://ese-project-1.onrender.com/');
       if (res.ok) {
         setBackendOnline(true);
       } else {
@@ -183,7 +183,7 @@ export default function App() {
     if (!window.confirm('Are you sure you want to offboard this employee? This action is permanent.')) return;
     
     try {
-      const res = await fetch(`http://localhost:3000/api/employees/${id}`, {
+      const res = await fetch(`https://ese-project-1.onrender.com/api/employees/${id}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`

@@ -6,7 +6,12 @@ connectDB();
 
 const app = express();
 
-app.use(cors());
+app.use(cors(
+  {
+    origin: ['http://localhost:3000', 'https://ese-project-1.onrender.com','https://ese-project-six.vercel.app/'],
+    credentials: true
+  }
+));
 app.use(express.json());
 
 // Routes Mounts
