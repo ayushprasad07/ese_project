@@ -149,8 +149,8 @@ export default function EmployeeForm({ onEmployeeAdded, selectedEmployee, onClea
 
     try {
       const url = selectedEmployee 
-        ? `http://localhost:3000/api/employees/${selectedEmployee._id}` 
-        : 'http://localhost:3000/api/employees';
+        ? `https://ese-project-1.onrender.com/api/employees/${selectedEmployee._id}` 
+        : 'https://ese-project-1.onrender.com/api/employees';
       
       const method = selectedEmployee ? 'PUT' : 'POST';
 

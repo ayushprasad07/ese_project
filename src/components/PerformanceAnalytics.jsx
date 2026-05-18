@@ -59,7 +59,7 @@ export default function PerformanceAnalytics({ employees, selectedEmployeeForAi,
   const fetchAnalytics = async () => {
     setLoadingStats(true);
     try {
-      const response = await fetch('http://localhost:3000/api/analytics', {
+      const response = await fetch('https://ese-project-1.onrender.com/api/analytics', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -103,7 +103,7 @@ export default function PerformanceAnalytics({ employees, selectedEmployeeForAi,
     setAiReport('');
 
     try {
-      const response = await fetch(`http://localhost:3000/api/ai-recommendation/${targetEmployeeId}`, {
+      const response = await fetch(`https://ese-project-1.onrender.com/api/ai-recommendation/${targetEmployeeId}`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`
